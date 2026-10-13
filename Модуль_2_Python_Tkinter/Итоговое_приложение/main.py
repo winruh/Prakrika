@@ -98,7 +98,7 @@ def katalog(user_fio):                                                     # ~ Ð
     canvas.create_window((0, 0), window=cards, anchor="nw")
     cards.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
 
-    img = Image.open("images/picture.png").resize((120, 80))
+    img = Image.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "images", "picture.png")).resize((120, 80))
     photo = ImageTk.PhotoImage(img)
     win3.photo = photo
 
